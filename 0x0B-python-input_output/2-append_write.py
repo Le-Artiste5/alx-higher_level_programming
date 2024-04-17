@@ -1,4 +1,4 @@
-#!/usr/bin/python
+#!/usr/bin/python3
 """This module appends a string to an already existing content"""
 
 def append_write(filename="", text=""):
@@ -8,7 +8,7 @@ def append_write(filename="", text=""):
         filename(str): This is the name of the file
         text(str): the text to be added to the end
 
-    Return:
+    iReturn:
         This returns the number of characters
     """
 
