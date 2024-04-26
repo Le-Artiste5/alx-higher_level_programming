@@ -85,4 +85,15 @@ class Rectangle(Base):
             """This is the area of the rectangle"""
             return self.width * self.height
 
+        def display(self):
+            """This function displays the standard output of rectangle class"""
+            if self.width == 0 or self.height == 0:
+                print("")
+                return
+            [print("") for y in range(self.y)]
+            for i in range(self.height):
+                [print(" ", end="")] for x in range(self.x)]
+                [print(" ", end="")] for w in range(self.width)]
+                print("")
+
 
