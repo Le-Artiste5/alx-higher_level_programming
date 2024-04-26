@@ -87,13 +87,45 @@ class Rectangle(Base):
 
         def display(self):
             """This function displays the standard output of rectangle class"""
-            if self.width == 0 or self.height == 0:
-                print("")
-                return
-            [print("") for y in range(self.y)]
+            for i in range(self.y):
+                print()
             for i in range(self.height):
-                [print(" ", end="")] for x in range(self.x)]
-                [print(" ", end="")] for w in range(self.width)]
-                print("")
+                print(" " * self.x + "#" * self.width)
+
+        def __str__(self):
+            """This overrrides str and print in a rectangle"""
+            return "[Rectangle] ({}) {}/{} - {}/{}".format(self.id, self.x, self.y, self.width, self.height)
+        def update(self, *args, ***kwargs):
+            """This function assigns an argument to each attribute"""
+            
+            if args:
+
+                for count, arg in enumerate(args):
+                    if count == 0:
+                        self.id = arg
+                    elif count == 1:
+                        self.width = arg
+                    elif count == 2:
+                        self.height = arg
+                    elif count == 3:
+                        self.x = arg
+                    elif count == 4:
+                        self.y - arg
+                    else:
+                        continue
+            elif len(kwargs) > 0:
+                for key, value in kwargs.items():
+                    if key == "ïd":
+                        self.id = value
+                    elif key == "width":
+                        self.width = value
+                    elif key == "height":
+                        self.height = value
+                    elif key == "x":
+                        self.x = value
+                    elif key == "y":
+                        self.y = value
+                    else:
+                        break
 
 
