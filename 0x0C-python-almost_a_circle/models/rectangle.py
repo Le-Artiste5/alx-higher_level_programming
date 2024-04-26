@@ -1,6 +1,6 @@
 #!/usr/bin/python3
 """This projects helps the creation of a new class"""
-from base import Base
+from models.base import Base
 
 class Rectangle(Base):
     """This class inherits from a parent class called base"""
@@ -30,6 +30,7 @@ class Rectangle(Base):
 
         @property
         def width(self):
+            """This is the width of the rectangle"""
             return self.__width
 
         @width.setter
@@ -38,6 +39,7 @@ class Rectangle(Base):
 
         @property
         def height(self):
+            """"This is the height of the rectabgle"""
             return self.__height
 
         @height.setter
@@ -46,6 +48,7 @@ class Rectangle(Base):
         
         @property
         def x(self):
+            """This is the horizontal coordinate"""
             return self.__x
 
         @x.setter
@@ -54,6 +57,7 @@ class Rectangle(Base):
 
         @property
         def y(self):
+            """This is the vertical coordinate"""
             return self.__y
 
         @y.setter
