@@ -31,3 +31,32 @@ class Square(Rectangle):
         def __str__(self):
             """The string representation"""
             return "[Square] ({}) {}/{} - {}".format(self.id, self.x, self.y, self.width)
+
+        def update(self, *args, **kwargs):
+            """This is the argument attribute"""
+            if args:
+                for count, arg in enumerate(args):
+                    if count == 0:
+                        self.id = arg
+                    if count == 1:
+                        self.size = arg
+                    if count == 2:
+                        self.x = arg
+                    if count == 3:
+                        self.y == arg
+                    else:
+                        break
+
+            elif len(kwargs) > 0:
+                for key, value in kwargs.item():
+                    if key == "id":
+                        self.id = value
+                    elif key == "size":
+                        self.width = value
+                        self.height = value
+                    elif key == "x":
+                        self.x = value
+                    elif key == "y":
+                        self.y = value
+                    else:
+                        break
